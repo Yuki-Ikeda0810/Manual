@@ -18,4 +18,4 @@
     2. [プログラムの命名規則](/docs/coding_style.md)
  
 4. **その他**
-    1. [便利なショートカットコマンド](/docs/set_command.md)
+    1. [便利なショートカットコマンドの設定](/docs/set_command.md)
