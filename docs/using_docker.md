@@ -1,38 +1,24 @@
 # **Dockerの使用方法**
 
-[Docker](https://www.docker.com/why-docker)は，コンテナという単位でOSレベルの環境を複数構築・管理することができます．
-これにより，ベースとなるOS上で，「Windows OS」や「Ubuntu OS」など，別のOSと切り替えを行いながら，開発をすることができるようになります．
-もちろん，同じOSの環境を複数構築することもできるため，複数の開発プロジェクトで競合が生じてしまうなどの問題を解決することができます．
-また，環境構築を一瞬で行うこともできるため，ある程度の開発ができるようになるととても便利です．
-
-※ まだ，Ubuntu環境での開発をあまり経験したことがない場合，Dockerという仕組みを理解するのがとても難しいと思います．
-たとえ，Dockerを使えこなせたとしても，誤った認識をしてしまったり，開発するにあたって大切な環境構築の方法がわからないままになってしまいます．
-必ず，Ubuntu環境の構築や開発を行ってから，Dockerを使ってください．
-
 ## **目次**
 
-1. [**Dockerとは**](#dockerとは)
+1. [**Dockerとは**](#1-dockerとは)
 
----
-
-2. [**Dockerの使用方法**](#dockerの使用方法)
+2. [**Dockerの使用方法**](#2-dockerの使用方法)
     1. [Dockerコンテナを作成する](#1-dockerコンテナを作成する)
     2. [複数の異なるDockerコンテナを作成する](#2-複数の異なるdockerコンテナを作成する)
     3. [複数の同じDockerコンテナを作成する](#3-複数の同じdockerコンテナを作成する)
     4. [同じDockerコンテナを複数のPCで作成する](#4-同じdockerコンテナを複数のpcで作成する)
 
----
-
-3. [**Dockerの基本操作**](#dockerの基本操作)
+3. [**Dockerの基本操作**](#3-dockerの基本操作)
     1. [Dockerイメージに関するコマンド](#1-dockerイメージに関するコマンド)
     2. [Dockerコンテナに関するコマンド](#2-dockerコンテナに関するコマンド)
----
 
-4. [**Dockerfileの作成**](#dockerfileの作成)
+4. [**Dockerfileの作成**](#4-dockerfileの作成)
 
+<br>
 
-
-## **Dockerとは**
+## **1. Dockerとは**
 
 Dockerは，Linuxのコンテナ技術を使ったもので，よく仮想マシンと比較されます．  
 VirtualBoxなどの仮想マシンでは，ホストマシン上で仮想ソフトを利用して，仮想マシンとゲストOSを作成し，仮想カーネル動かすことでROSのようなミドルウェアを動かします．  
@@ -47,7 +33,6 @@ VirtualBoxなどの仮想マシンでは，ホストマシン上で仮想ソフ�
 
 - ミドルウェア  
     コンピュータの基本的な制御を行うOSと，各要素技術を実行するプログラムとの中間に入るソフトウェアのこと  
-
 
 </details>
 
@@ -68,7 +53,9 @@ Dockerを使う上での注意点として，ホストOS上のGUI(Graphical User
 
 :arrow_forward:[Docker Workspaceの使用方法](/docs/using_docker_ws.md)
 
-## **Dockerの使用方法**
+<br>
+
+## **2. Dockerの使用方法**
 
 ### 1. Dockerコンテナを作成する
 
@@ -124,7 +111,9 @@ DockerのコンテナはDockerfileやDockerイメージがあれば，同じDock
 
 <div align="center"><img src="/img/using_docker05.png" width="80%"></div>
 
-## **Dockerの基本操作**
+<br>
+
+## **3. Dockerの基本操作**
 
 冒頭でも説明しましたが，Dockerは基本的にホストOSのCUI(Character User Interface)環境に対して，任意のOS環境(Dockerコンテナ)を作成する形です．
 そのため，Dockerを操作する方法は，全てCUIでのコマンド操作です．
@@ -162,7 +151,6 @@ Dockerイメージを用いてDockerコンテナを作成・起動するコマ�
 # イメージを取得し，コンテナを作成・起動
 $ docker run -it イメージ名
 ```
-
 
 以下は，「docker run」コマンドの引数です．
 
@@ -218,7 +206,6 @@ $ docker run -it イメージ名
     </tr>
 </table>
 
-
 Dockerコンテナを管理・起動・停止するコマンドです．
 
 ```bash
@@ -244,7 +231,6 @@ $ docker rm コンテナ名
 $ docker rm コンテナID
 ```
 
-
 以下は，「docker rm」コマンドの引数です．
 
 <table>
@@ -258,7 +244,6 @@ $ docker rm コンテナID
     </tr>
 </table>
 
-
 DockerコンテナやホストOSのファイルをコピーするコマンドです．
 
 ```bash
@@ -268,7 +253,6 @@ $ docker cp ホスト側のファイルパス コンテナ名:コンテナ内の
 # コンテナ側からホスト内にファイルをコピー
 $ docker cp コンテナ名:コンテナ内のコピー元ファイルパス ホスト側のコピー先ディレクトリパス
 ```
-
 
 Dockerコンテナ同士を繋ぐネットワークに関するコマンドです．
 
@@ -282,7 +266,6 @@ $ docker network ls
 # Dockerネットワークの詳細を確認
 $ docker network inspect wordpress-network
 ```
-
 
 Dockerコンテナを一括で削除するコマンドです．
 
@@ -309,13 +292,14 @@ $ docker rmi `docker images -q`
 $ docker rmi $(docker images -f "dangling=true" -q)
 ```
 
-## **Dockerfileの作成**
+<br>
+
+## **4. Dockerfileの作成**
 
 Dockerfileの作り方について説明します．
 まず，Dockerfileのファイル名は必ず「Dockerfile」にして下さい．
 他の名前だと上手くBuildすることが出来ません．  
 以下は，Dockerfileの記述例と各行の記述内容についての説明です．
-
 
 ```bash
 FROM centos:7                                               # ＜1＞
@@ -323,6 +307,7 @@ RUN yum install -y java                                     # ＜2＞
 ADD files/apache-tomcat-9.0.6.tar.gz /opt/                  # ＜3＞
 CMD [ "/opt/apache-tomcat-9.0.6/bin/catalina.sh", "run" ]   # ＜4＞
 ```
+
 <table>
     <tr>
         <th nowrap>行番号</th>
