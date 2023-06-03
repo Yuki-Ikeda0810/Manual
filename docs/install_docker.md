@@ -24,8 +24,6 @@ WindowsやMacOSでも使用できますが，ここでは，UbuntuのOS上にイ
 :arrow_forward: [Ubuntuをインストール](/docs/install_ubuntu.md)
 からUbuntuをインストールして下さい．
 
-<br>
-
 ### 2. 依存関係のあるパッケージをインストール
 「Dockerをインストールする」上で必要となるパッケージを予めインストールします．
 
@@ -59,8 +57,6 @@ $ sudo apt install -y
 
 </details>
 
-<br>
-
 ### 3. 公開鍵を入手する
 2.でインストールしたcurlを使ってネットワーク上から公開鍵を入手します．  
 
@@ -69,8 +65,6 @@ $ sudo apt install -y
 ``` bash
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
-
-<br>
 
 ### 4. 外部リポジトリの登録
 apt(Advanced Package Tool)はパッケージ管理システムであり，  
@@ -84,8 +78,6 @@ apt(Advanced Package Tool)はパッケージ管理システムであり，
 $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
 
-<br>
-
 ### 5. docker-ceのインストール
 aptを更新し，実際にDockerをインストールします．  
 *docker-ce*のceとはCommunity Editionの略であり無償版を意味しています．  
@@ -96,8 +88,6 @@ aptを更新し，実際にDockerをインストールします．
 $ sudo apt update  
 $ sudo apt install -y docker-ce
 ```
-
-<br>
 
 ### 6. 実行権限の付与
 現在の状態ではDockerを使用するのに管理者権限sudoコマンドが必要になります．  
@@ -111,8 +101,6 @@ $ sudo groupadd docker
 $ sudo usermod -aG docker $USER  
 $ sudo su - $USER
 ```  
-
-<br>
 
 ### 7. サウンドの設定
 Dockerのコンテナ内でサウンド関係を扱うために，PulseAudioというソフトの設定を行います．  
@@ -149,8 +137,6 @@ $ echo '#!bin/bash
 $ sudo bash /etc/profile.d/sound_setup.sh
 ```
 
-<br>
-
 ### 8. サービスの有効化
 dockerをシステムとして有効にします．
 
@@ -159,8 +145,6 @@ dockerをシステムとして有効にします．
 ``` bash
 $ sudo systemctl enable docker
 ```
-
-<br>
 
 ### *9. 再起動
 再起動をかけることで今までの設定を反映させます．
