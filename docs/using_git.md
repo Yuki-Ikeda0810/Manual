@@ -28,8 +28,7 @@
 
 初回のみ，Gitのインストールと設定を行います．
 まず，Gitのアカウントを作成します．
-
-:arrow_forward: [GitHubのアカウントを作る](https://github.com/)
+- [GitHubのアカウントを作る](https://github.com/)
 
 ### 2. Gitのインストール
 
@@ -155,12 +154,12 @@ $ git pull
 チームで開発をする場合，このようなことが頻繁に起きてしまうため，後述するBranchという機能を駆使することでこれらを防ぎます．
 以下のリンクから確認してください．
 
-:arrow_forward: [4. Branchの作成](#4-branchの作成)
+- [5. Branchの作成](#5-branchの作成)
 
 ### 4. ローカルの変更をリモートのリポジトリに反映させる
 
 以下のコマンドで，ローカルのリポジトリで変更(更新)があった場合に，その変更(更新)をCloud上のリモートのリポジトリに反映させることができます．
-Pushコマンドの時に登場する「Branch」については，「[4. Branchの作成](#4-branchの作成)」にて説明します．
+Pushコマンドの時に登場する「Branch」については，「[5. Branchの作成](#5-branchの作成)」にて説明します．
 図は，ローカルの変更をリモートのリポジトリに反映させるイメージになります．
 
 ```bash
@@ -196,7 +195,7 @@ $ git push origin Branch名
 
 コメントを記述する際の命名規則などは，以下のリンクから確認してください．
 
-:arrow_forward: <a href="https://github.com/TeamSOBITS/sobits_manual/blob/main/docs/git_style.md" target="_blank">Git命名規則</a>
+- <a href="https://github.com/TeamSOBITS/sobits_manual/blob/main/docs/git_style.md" target="_blank">Git命名規則</a>
 
 ### 参考URL
 - <a href="https://qiita.com/A__Matsuda/items/f71a935612a55d6e674e" target="_blank">Git Push</a> <br>
@@ -305,16 +304,16 @@ $ git checkout Branch名
 Branch上で，リモートの変更をローカルのリポジトリに反映させる方法は，前述した方法と同じです．
 以下のリンクから確認してください．
 
-:arrow_forward: [3. リモートの変更をローカルのリポジトリに反映させる](#3-リモートの変更をローカルのリポジトリに反映させる)
+- [3. リモートの変更をローカルのリポジトリに反映させる](#3-リモートの変更をローカルのリポジトリに反映させる)
 
 Branch上で，ローカルの変更をリモートのリポジトリに反映させる方法は，前述した方法と同じです．
 以下のリンクから確認してください．
 
-:arrow_forward: [4. ローカルの変更をリモートのリポジトリに反映させる](#4-ローカルの変更をリモートのリポジトリに反映させる)
+- [4. ローカルの変更をリモートのリポジトリに反映させる](#4-ローカルの変更をリモートのリポジトリに反映させる)
 
 Branchを作成する際の命名規則などは，以下のリンクから確認してください．
 
-:arrow_forward: <a href="https://github.com/TeamSOBITS/sobits_manual/blob/git_devel/docs/git_style.md" target="_blank">Git命名規則</a>
+- <a href="https://github.com/TeamSOBITS/sobits_manual/blob/git_devel/docs/git_style.md" target="_blank">Git命名規則</a>
 
 #### 5-3. ローカルからBranchを作成
 
@@ -355,16 +354,16 @@ $ git push origin Branch名
 Branch上で，リモートの変更をローカルのリポジトリに反映させる方法は，前述した方法と同じです．
 以下のリンクから確認してください．
 
-:arrow_forward: [2. リモートの変更をローカルのリポジトリに反映させる](#2-リモートの変更をローカルのリポジトリに反映させる)
+- [2. リモートの変更をローカルのリポジトリに反映させる](#2-リモートの変更をローカルのリポジトリに反映させる)
 
 Branch上で，ローカルの変更をリモートのリポジトリに反映させる方法は，前述した方法と同じです．
 以下のリンクから確認してください．
 
-:arrow_forward: [3. ローカルの変更をリモートのリポジトリに反映させる](#3-ローカルの変更をリモートのリポジトリに反映させる)
+- [3. ローカルの変更をリモートのリポジトリに反映させる](#3-ローカルの変更をリモートのリポジトリに反映させる)
 
 Branchを作成する際の命名規則などは，以下のリンクから確認してください．
 
-:arrow_forward: <a href="https://github.com/TeamSOBITS/sobits_manual/-/blob/main/docs/git_style.md" target="_blank">Git命名規則</a>
+- <a href="https://github.com/TeamSOBITS/sobits_manual/-/blob/main/docs/git_style.md" target="_blank">Git命名規則</a>
 
 
 #### 参考5-1URL
@@ -384,7 +383,6 @@ Mergeとは，Gitにおいて分岐した履歴を戻して統合する手段の
 BranchをMerge(統合)することは，今まで開発してきたプログラムを大きく変化させることになります．
 そのため，Mergeする際は，必ずOwnerの権限が必要になります．
 ここでは，OwnerにMergeのリクエストを送信するまでの手順を記載しています．
-
 
 <details><summary>※Githubはこちらをクリック</summary><div>
 
