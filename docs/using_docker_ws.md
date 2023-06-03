@@ -1,30 +1,17 @@
 # **Docker Workspaceの使用方法**
 
-[Docker](https://www.docker.com/why-docker)は，コンテナという単位でOSレベルの環境を複数構築・管理することができるミドルウェアになります．
-Dockerについて知らないという方は，以下のリンクからDockerについて確認してください．
-
-:arrow_forward: [Dockerの使用方法](/docs/using_docker.md)
-
-※ まだ，Ubuntu環境での開発をあまり経験したことがない場合，Dockerという仕組みを理解するのがとても難しいと思います．
-たとえ，Dockerを使えこなせたとしても，誤った認識をしてしまったり，開発するにあたって大切な環境構築の方法がわからないままになってしまいます．
-必ず，Ubuntu環境の構築や開発を行ってから，Dockerを使ってください．
-
-ここでは，SOBITSがDockerを知らない人でも簡単にDockerを使いこなせるように開発したDocker Workspaceの使い方について説明していきます．
-Docker Workspaceは，SOBITSで開発したこともあり，独自の仕様となっています．
-Dockerの基本的な使い方とは大きくことなるので，Docker WorkspaceでないDockerを使用する際は，注意してください．
-
 ## **目次**
 
-1. [**Docker Workspaceの使用方法**](#docker-workspaceの使用方法)
+1. [**Docker Workspaceの使用方法**](#1-docker-workspaceの使用方法)
     1. [Docker Workspaceのコマンド操作](#1-docker-workspaceのコマンド操作)
     2. [Docker Workspaceの作成](#2-docker-workspaceの作成)
     3. [Docker Workspaceの操作](#3-docker-workspaceの操作)
 
-## **Docker Workspaceの使用方法**
+## **1. Docker Workspaceの使用方法**
 
 ### 1. Docker Workspaceのコマンド操作
 
-SOBITSで開発したDocker Workspaceを使用する場合は，コマンド操作を使用することはほとんどありません．
+Docker Workspaceを使用する場合は，コマンド操作を使用することはほとんどありません．
 [Dockerの使用方法](/docs/using_docker.md)でも紹介していますが，ここでは，Docker Workspaceを操作する際に用いるコマンドについて紹介します．
 
 以下のコマンドで，Dockerイメージを管理することができます．
@@ -66,12 +53,12 @@ $ docker rm <CONTAINER ID>
 その前に，[Dockerの使用方法](/docs/using_docker.md)，[Gitの使用方法](/docs/using_git.md)，[Dockerのインストール方法](/docs/install_docker.md)をそれぞれ理解し，実行したか確認してください．
 それぞれの項目で，Docker Workspaceを使うためのセットアップも行っているため，実行していない場合は必ず実行してください．
 
-以上を実行できたら，以下のコマンドをホーム直下で入力して[Docker Workspace](https://github.com/TeamSOBITS/docker_ws)をダウンロードします．
-図は，ホーム直下に[Docker Workspace](https://github.com/TeamSOBITS/docker_ws)をダウンロードした様子になります．
+以上を実行できたら，以下のコマンドをホーム直下で入力して[Docker Workspace](https://github.com/Yuki-Ikeda0810/docker_ws)をダウンロードします．
+図は，ホーム直下に[Docker Workspace](https://github.com/Yuki-Ikeda0810/docker_ws)をダウンロードした様子になります．
 
 ```bash
 # リモートからローカルにDocker Workspaceをダウンロード
-$ git clone https://github.com/TeamSOBITS/docker_ws.git
+$ git clone https://github.com/Yuki-Ikeda0810/docker_ws.git
 ```
 
 <div align="center"><img src="/img/using_docker_ws01.png" width="60%"></div>
