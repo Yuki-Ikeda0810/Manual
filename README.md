@@ -16,3 +16,6 @@
 3. **開発における命名規則**
     1. [Gitの命名規則](/docs/git_style.md)
     2. [プログラムの命名規則](/docs/coding_style.md)
+ 
+4. **その他**
+    1. [便利なショートカットコマンド](/docs/set_command.md)
