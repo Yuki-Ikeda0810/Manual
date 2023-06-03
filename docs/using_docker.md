@@ -51,7 +51,7 @@ Dockerを使う上での注意点として，ホストOS上のGUI(Graphical User
 
 また，SOBITSがDockerを知らない人でも簡単にDockerを使いこなせるように開発したDocker Workspaceについて知りたいという方は，以下のリンクからDocker Workspaceについて確認して下さい．
 
-:arrow_forward:[Docker Workspaceの使用方法](/docs/using_docker_ws.md)
+- [Docker Workspaceの使用方法](/docs/using_docker_ws.md)
 
 <br>
 
