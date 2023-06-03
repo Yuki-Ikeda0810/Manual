@@ -2825,6 +2825,9 @@ Total_time = 5.00
 
 </details>
 
+ちなみに，汎用的なROSプログラムのテンプレートは下記のリンクにあります．
+- [ROS Template](https://github.com/Yuki-Ikeda0810/ROS_template)
+
 ---
 
 [トップに戻る](#rosの使用方法)
