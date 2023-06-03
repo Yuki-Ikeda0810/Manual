@@ -88,7 +88,7 @@ SOBITS Manualでは，「ros_melodic_sobit_ws」の名前のまま，進めて�
 このとき，適した環境がない場合，自身で新しく作成する必要があります．
 以下のリンクから，自身で新しく作成することができます．
 
-:arrow_forward: [任意のCUDA・cuDNNバージョンでのDockerfileの作り方](aaa) (未完成)
+- 任意のCUDA・cuDNNバージョンでのDockerfileの作り方 (未完成)
 
 ```bash
 # 「ros_melodic_sobit_ws/Dockerfiles/cpu」ディレクトリまで移動
@@ -206,7 +206,7 @@ SOBITS Manualでは，「ros_melodic_sobit_ws sobits@~$」と表示されます�
 実機のロボットを接続し，ホストOS側で読み込んだものをDockerコンテナ側に共有しているというものです．
 ほとんどの人が知らなくても問題ない設定ですが，気になる方は以下のリンクから確認することができます．
 
-:arrow_forward: [docker runの設定](aaa) (未完成)
+- docker runの設定 (未完成)
 
 ---
 
