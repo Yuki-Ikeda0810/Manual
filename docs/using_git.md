@@ -8,10 +8,7 @@
     3. [GitアカウントをホストPCに登録](#3-gitアカウントをホストpcに登録)
     4. [GitHubトークンの作成](#4-githubトークンの作成)
 
-2. [**Gitの権限について**](#gitの権限について)
-    1. [参考URL](#参考url)
-
-3. [**Gitの基本操作**](#2-gitの基本操作)
+2. [**Gitの基本操作**](#2-gitの基本操作)
     1. [環境セットアップ](#1-環境セットアップ)
     2. [リモートからローカルにリポジトリをダウンロードする](#2-リモートからローカルにリポジトリをダウンロードする)
     3. [リモートの変更をローカルのリポジトリに反映させる](#3-リモートの変更をローカルのリポジトリに反映させる)
@@ -31,11 +28,8 @@
 
 初回のみ，Gitのインストールと設定を行います．
 まず，Gitのアカウントを作成します．
-SOBITSでは，主に，GitHubを使用していますが，何かと開発をしているとGitlabを使う機会もあると思うので，GitHubとGitLabの両方ともアカウントを持っていると便利です．
 
 :arrow_forward: [GitHubのアカウントを作る](https://github.com/)
-
-:arrow_forward: [GitLabのアカウントを作る](https://gitlab.com/)
 
 ### 2. Gitのインストール
 
@@ -117,53 +111,7 @@ i. 作成されたトークンを忘れないようにする<br>
 
 <br>
 
-## **2. Gitの権限について**
-
-チームで開発を進めてきたプログラムは，チームの財産と言っても過言ではありません．
-特に，SOBITSのような歴代の先輩方が築き上げてきたプログラムを使用・応用して，開発を進めていく場合，積み重ねてきたプログラムのリソースはとても膨大なものになってきます．
-これらの管理を全メンバーに任せてしまうと，それぞれの価値観で様々な管理を行ってしまう可能性があります．
-最悪の場合，チームの財産であるプログラムを失うことに繋がってしまうかもしれません．
-そのため，SOBITSでは，チームで開発を進めていくために，チームの財産となるプログラムを管理するための「役職」を設けています．
-役職の種類と詳細は以下の通りです．
-
-<details><summary>※Githubはこちらをクリック</summary><div>
-
-| Gitの役職 | 役職を持つメンバー | 1つ下の役職に加えてできること |
-----|----|----
-| Owner | チームの代表 <br> (修士以上の各期に最大2人まで) | 全ての権限 <br> リポジトリの削除 |
-| Member<br>(Write Permission) | 修士 学士 | チームリポジトリのClone/Pull/Push <br> リポジトリの作成 |
-| 権限なし | 卒業生 | パブリックリポジトリの閲覧 <br> Clone |
-
-</div>
-</details>
-
-<details><summary>※Gitlabはこちらをクリック</summary><div>
-
-| Gitの役職 | 役職を持つメンバー | 1つ下の役職に加えてできること |
-----|----|----
-| Owner | チームの代表 <br> (修士以上の各期に最大2人まで) | 全ての権限 <br> リポジトリの削除 |
-| Maintainer | 修士 | チームメンバーの招待 <br> リポジトリのMain BranchへのPush <br> プロジェクト等の編集 |
-| Developer | 学士 | Branchの作成/削除/Push <br> マージリクエストの作成 <br> リポジトリの作成 |
-| Reporter | 卒業生 | コードの閲覧 <br> Clone |
-
-</div>
-</details>
-
-※ Gitの役職を持つメンバーはあくまで目安です．その時に応じて，最適な人材を選んでください．
-
-現在のSOBITSメンバーの役職は，以下のリンクから確認できます．
-
-:arrow_forward: [SOBITSメンバーの役職](https://github.com/orgs/TeamSOBITS/people)
-
-### 参考URL
-- <a href="https://qiita.com/mats16/items/f11e2e25731c325eeda8" target="_blank">GitLabのユーザ権限</a> 
-- <a href="https://qiita.com/4_mio_11/items/2957739123f2db9e9db6" target="_blank">【UE4】アセット管理のためにGitLabに登録し、使用する</a> 
-- <a href="https://docs.github.com/ja/organizations/managing-access-to-your-organizations-repositories/setting-base-permissions-for-an-organization" target="_blank">Organizationの基本レベルの権限の設定</a>
-- <a href="https://qiita.com/w_tkmn/items/ee16bf16715f4bbcbd9b" target="_blank">githubのorganizationアカウントの運営について</a>
-
-<br>
-
-## **3. Gitの基本操作**
+## **2. Gitの基本操作**
 
 ### 1. 環境セットアップ
 現在作業をしているディレクトリをgitで管理できるようにするためのセットアップを行います．このコマンドは，管理したいディレクトリごとに最初に一回のみ行ってください．
