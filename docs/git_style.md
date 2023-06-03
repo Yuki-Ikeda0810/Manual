@@ -10,6 +10,8 @@
 2. [**Commitの命名規則**](#2-commitの命名規則)
     1. [Commit参考URL](#1-参考urlcommit)
 
+<br>
+
 ## **1. Branchの命名規則**
 
 ### 1. ROSパッケージではないリポジトリ
@@ -38,6 +40,8 @@
 - [ブランチ運用ルール](https://gist.github.com/minop1205/b87a1f5ffab6d8af28a66aca64378171)
 - [git flowの実際的運用方法](https://qiita.com/kanatatsu64/items/8feb5bf0352d39cfa3c3)
 - [Gitのブランチモデルについて](https://www.tam-tam.co.jp/tipsnote/program/post16686.html)
+
+<br>
 
 ## **2. Commit時の命名規則**
 
