@@ -7,16 +7,19 @@
 4. [パッケージの作成](#4-パッケージの作成)
 5. [ROSの使用方法](#5-rosの使用方法)
 
----
+<br>
 
 ## 1. Ubuntuのインストール
 
 ROSをインストールする前に[Ubuntuのインストール](/docs/install_ubuntu.md)が必要です．
 まずはそこからはじめましょう．
 
+<br>
+
 ## 2. ROSのインストール
 
 以下のコマンドでROSをインストールします．
+
 ``` bash
 # ROSの情報をsources.listに記述
 $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -53,10 +56,12 @@ $ roscore
 ```
 
 端末の最後に以下の表示があればインストールは成功です．
+
 ``` bash
 $ started core service [/rosout] 
 ```
 
+<br>
 
 ## 3. ワークスペースの作成
 
@@ -111,6 +116,8 @@ $ echo $ROS_PACKAGE_PATH
 /home/youruser/catkin_ws/src:/opt/ros/melodic/share:/opt/ros/indigo/stacks  #youruserはユーザ名によって異なります
 ```
 
+<br>
+
 ## 4. パッケージの作成 
 
 パッケージとは，物体認識のパッケージ，自律移動のパッケージというように，それぞれの機能をまとめたディレクトリのことを言います．
@@ -164,6 +171,8 @@ $ roscd ros_start
 ```bash
 ~/catkin_ws/src/ros_start$ 
 ```
+
+<br>
 
 ## 5. ROSの使用方法 
 
