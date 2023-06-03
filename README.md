@@ -19,3 +19,4 @@
  
 4. **その他**
     1. [便利なショートカットコマンドの設定](/docs/set_command.md)
+    2. [シリアルポート(デバイス)登録の設定](/docs/set_serialport.md)
