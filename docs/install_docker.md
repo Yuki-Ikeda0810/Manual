@@ -1,14 +1,5 @@
 # **Dockerのインストール方法**
 
-[Docker](https://www.docker.com/why-docker)はDocker社が開発している，コンテナ型の仮想環境を作成，配布，実行するためのプラットフォームです．  
-
-Dockerには以下の利点があります．
-- コード化されたファイルを共有することで，どこでも誰でも同じ環境が作れる
-- 作成した環境を共有しやすい
-- 作成と削除が簡単にできる
-
-Dockerについて詳しく知りたい方は[こちら](https://knowledge.sakura.ad.jp/13265/)
-
 ## **目次**
 1. [**事前準備**](#1-事前準備)
 2. [**依存関係のあるパッケージをインストール**](#2-依存関係のあるパッケージをインストール)
@@ -21,7 +12,7 @@ Dockerについて詳しく知りたい方は[こちら](https://knowledge.sakur
 9. [**再起動**](#9-再起動)
 10. [**クイックインストール**](#10-クイックインストール)
 
-
+<br>
 
 ## **1. 事前準備**
 本研究室では，DockerをUbuntuのOS上で使用します．  
@@ -30,12 +21,13 @@ WindowsやMacOSでも使用できますが，ここでは，UbuntuのOS上にイ
 :arrow_forward: [Ubuntuをインストール](/docs/install_ubuntu.md)
 からUbuntuをインストールして下さい．
 
-
+<br>
 
 ## **2. 依存関係のあるパッケージをインストール**
 「Dockerをインストールする」上で必要となるパッケージを予めインストールします．
 
-以下のコマンドを端末で実行します．  
+以下のコマンドを端末で実行します． 
+
 ``` bash
 $ sudo apt install -y 
     apt-transport-https 
@@ -44,9 +36,7 @@ $ sudo apt install -y
     software-properties-common
 ```
 
----
 <details><summary>※各パッケージの説明はこちらをクリック</summary>
-
 
 - ***apt-transport-https***  
     httpsに対応したaptを使用するためのパッケージ
@@ -66,14 +56,18 @@ $ sudo apt install -y
 
 </details>
 
+<br>
+
 ## **3. 公開鍵を入手する**
 2.でインストールしたcurlを使ってネットワーク上から公開鍵を入手します．  
 
 以下のコマンドを端末で実行します．  
+
 ``` bash
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
+<br>
 
 ## **4. 外部リポジトリの登録**
 apt(Advanced Package Tool)はパッケージ管理システムであり，  
@@ -82,21 +76,25 @@ apt(Advanced Package Tool)はパッケージ管理システムであり，
 そこでDockerのパッケージが格納されている外部リポジトリを登録します．
 
 以下のコマンドを端末で実行します．  
+
 ``` bash
 $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
 
+<br>
 
 ## **5. docker-ceのインストール**
 aptを更新し，実際にDockerをインストールします．  
 *docker-ce*のceとはCommunity Editionの略であり無償版を意味しています．  
 
 以下のコマンドを端末で実行します．  
+
 ``` bash
 $ sudo apt update  
 $ sudo apt install -y docker-ce
 ```
 
+<br>
 
 ## **6. 実行権限の付与**
 現在の状態ではDockerを使用するのに管理者権限sudoコマンドが必要になります．  
@@ -104,11 +102,14 @@ $ sudo apt install -y docker-ce
 これにより，sudoコマンドなしでDockerが使用できます．
 
 以下のコマンドを端末で実行します．  
+
 ``` bash
 $ sudo groupadd docker  
 $ sudo usermod -aG docker $USER  
 $ sudo su - $USER
 ```  
+
+<br>
 
 ## **7. サウンドの設定**
 Dockerのコンテナ内でサウンド関係を扱うために，PulseAudioというソフトの設定を行います．  
@@ -116,12 +117,14 @@ Dockerのコンテナ内でサウンド関係を扱うために，PulseAudioと�
 ここではまず，echoコマンドについて説明します．  
 echoは，画面に文字列や数値，変数を表示するコマンドです．  
 また，画面ではなく，ファイルに出力することも出来ます．  
+
 ```bash
 $ echo "hogehoge" >> hoge.txt
 ```
 上のようなコマンドを実行するとhoge.txtファイルの中に「hogehoge」が書き加えられます．  
 但し，sudo(管理者)権限がないと編集の出来ないファイル(鍵のついたファイル)に書き加える場合は，  
 以下のように「>>」の部分を「| sudo tee 」とする必要があります．
+
 ```bash
 $ echo "hogehoge" | sudo tee hoge.txt
 ```
@@ -129,6 +132,7 @@ $ echo "hogehoge" | sudo tee hoge.txt
 
 
 以下のコマンドを端末で実行します．
+
 ```bash
 $ echo "pacmd load-module module-native-protocol-unix socket=/tmp/pulseaudio.socket &> /dev/null" >> ~/.bashrc
 $ echo '#!bin/bash
@@ -142,21 +146,29 @@ $ echo '#!bin/bash
 $ sudo bash /etc/profile.d/sound_setup.sh
 ```
 
+<br>
+
 ## **8. サービスの有効化**
 dockerをシステムとして有効にします．
 
 以下のコマンドを端末で実行します．  
+
 ``` bash
 $ sudo systemctl enable docker
 ```
+
+<br>
 
 ## **9. 再起動**
 再起動をかけることで今までの設定を反映させます．
 
 以下のコマンドを端末で実行します．  
+
 ``` bash
 $ sudo reboot
 ```
+
+<br>
 
 ## **10. クイックインストール**
 なお，これらの手順は[setup_audio.sh](/install_sh/setup_audio.sh)と[install_docker.sh](/install_sh/install_docker.sh)をダウンロードし，以下のコマンドを打つことで自動でDockerのインストールまで行ってくれます．
