@@ -12,6 +12,7 @@
        - [Docker_WS](https://github.com/Yuki-Ikeda0810/Docker_WS)
     5. [ROSの使用方法](/docs/using_ros.md)
        - [ROS_Template](https://github.com/Yuki-Ikeda0810/ROS_template)
+       - [rosbag_template](https://github.com/Yuki-Ikeda0810/rosbag_template)
 
 3. **開発における命名規則**
     1. [Gitの命名規則](/docs/git_style.md)
